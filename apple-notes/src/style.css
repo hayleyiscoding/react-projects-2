@@ -406,7 +406,7 @@ a:hover {
 .aside--note {
   padding: 1rem;
   padding-bottom: 3rem;
-  border: 1px solid black;
+  border-top: 1px solid #c8c6c6dc;
 }
 .aside--note--title {
   overflow: hidden;
@@ -434,6 +434,13 @@ a:hover {
   border-bottom: solid 1px currentColor;
   border-radius: 0 0 2px 2px;
   background-color: currentColor;
+}
+
+.selected-note-icon {
+  color: white !important;
+}
+.trash-solid.icon:hover {
+  color: white;
 }
 
 .trash-solid.icon:before {
@@ -467,9 +474,12 @@ a:hover {
 
 .selected-note {
   background-color: var(--primary);
+  color: white;
+  font-weight: 700;
 }
 
-.selected-note .text-snippet {
+.aside--note:hover {
+  background-color: var(--primary);
   color: white;
   font-weight: 700;
 }

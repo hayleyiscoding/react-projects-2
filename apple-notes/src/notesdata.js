@@ -1,3 +1,3 @@
-const notesData = [{ id: 1, body: "This is a note" }];
+const notesData = [];
 
 export default notesData;
