@@ -1,22 +1,22 @@
+import { FaTrash } from "react-icons/fa";
+
 export default function Sidebar(props) {
   const notesElements = props.notes.map((note, index) => (
     <li
-      className={`aside--note flex align-center justify-between' ${
+      className={`aside--note flex align-center' ${
         note.id === props.currentNote.id ? "selected-note" : ""
       }`}
       key={note.id}
       onClick={() => props.setCurrentNoteId(note.id)}
     >
-      <h3 className='aside--note--title flex-75'>{note.body.split("\n")[0]}</h3>
+      <h3 className='aside--note--title flex-75'>
+        {note.body.replace(/[^a-zA-Z ]/g, "").split("\n")[0]}
+      </h3>
       <div
-        className='aside--note--delete flex-5'
+        className='aside--note--delete flex-25 text-center'
         onClick={(event) => props.deleteNote(event, note.id)}
       >
-        <div
-          className={`trash-solid icon ${
-            note.id === props.currentNote.id ? "selected-note-icon" : ""
-          }`}
-        ></div>
+        <FaTrash />
       </div>
     </li>
   ));

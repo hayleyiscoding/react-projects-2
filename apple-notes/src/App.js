@@ -2,7 +2,6 @@ import React from "react";
 import Editor from "./components/Editor";
 import EmptyNotes from "./components/EmptyNotes";
 import Sidebar from "./components/Sidebar";
-import notesData from "./notesdata";
 import Split from "react-split";
 import { nanoid } from "nanoid";
 
