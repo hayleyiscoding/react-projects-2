@@ -385,6 +385,7 @@ a:hover {
 .aside {
   width: 20%;
   height: 100vh;
+  overflow: auto;
 }
 .aside--header {
   padding: 2rem 7rem 3rem 7rem;
@@ -475,13 +476,11 @@ a:hover {
 .selected-note {
   background-color: var(--primary);
   color: white;
-  font-weight: 700;
 }
 
 .aside--note:hover {
   background-color: var(--primary);
   color: white;
-  font-weight: 700;
 }
 
 .ql-editor p,
