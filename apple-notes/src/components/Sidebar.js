@@ -10,7 +10,7 @@ export default function Sidebar(props) {
       onClick={() => props.setCurrentNoteId(note.id)}
     >
       <h3 className='aside--note--title flex-75'>
-        {note.body.replace(/[^a-zA-Z ]/g, "").split("\n")[0]}
+        {note.body.split("\n")[0].replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, "")}
       </h3>
       <div
         className='aside--note--delete flex-25 text-center'
