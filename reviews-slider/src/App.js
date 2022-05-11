@@ -21,10 +21,15 @@ export default function App() {
     }
   }
   function handleSurpriseMe() {
-    setSlideIndex(
-      (prevIndex) => (prevIndex = Math.floor(Math.random() * reviewData.length))
-    );
+    let randomNumber = Math.floor(Math.random() * reviewData.length);
+    console.log(randomNumber);
+    if (randomNumber === slideIndex) {
+      setSlideIndex((prevIndex) => (prevIndex = randomNumber - 1));
+    } else {
+      setSlideIndex((prevIndex) => (prevIndex = randomNumber));
+    }
   }
+  // Need to account for what happens if one person is chose twice by the random number. You can maybe use a checkNumber function
 
   return (
     <div className='text-center'>
